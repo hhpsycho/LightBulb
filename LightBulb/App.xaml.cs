@@ -20,7 +20,7 @@ namespace LightBulb
 
         public static string ExecutableFilePath { get; } = Path.ChangeExtension(typeof(App).Assembly.Location, "exe");
 
-        public static string GitHubProjectUrl { get; } = "https://github.com/Tyrrrz/LightBulb";
+        public static string GitHubProjectUrl { get; } = "https://github.com/xkonglong/LightBulb";
     }
 
     public partial class App
@@ -29,9 +29,6 @@ namespace LightBulb
 
         public static string HiddenOnLaunchArgument { get; } = "--start-hidden";
 
-        public static bool IsHiddenOnLaunch { get; } = CommandLineArgs.Contains(
-            HiddenOnLaunchArgument,
-            StringComparer.OrdinalIgnoreCase
-        );
+        public static bool IsHiddenOnLaunch { get; } = CommandLineArgs.Contains(HiddenOnLaunchArgument, StringComparer.OrdinalIgnoreCase);
     }
 }

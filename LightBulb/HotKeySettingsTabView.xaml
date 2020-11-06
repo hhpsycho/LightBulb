@@ -1,0 +1,147 @@
+﻿<UserControl
+    x:Class="LightBulb.Views.Components.Settings.HotKeySettingsTabView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:LightBulb.Views.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:settings="clr-namespace:LightBulb.ViewModels.Components.Settings"
+    d:DataContext="{d:DesignInstance Type=settings:HotKeySettingsTabViewModel}"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    Style="{DynamicResource MaterialDesignRoot}"
+    mc:Ignorable="d">
+    <StackPanel Orientation="Vertical">
+        <!--  Toggle hotkey  -->
+        <Grid Margin="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock
+                Grid.Column="0"
+                VerticalAlignment="Center"
+                Text="切换 LightBulb"
+                ToolTip="全局热键，用于打开/关闭LightBulb。" />
+            <controls:HotKeyTextBox
+                Grid.Column="1"
+                Width="120"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                HotKey="{Binding ToggleHotKey}"
+                Style="{DynamicResource MaterialDesignTextBox}"
+                TextAlignment="Center" />
+        </Grid>
+
+        <!--  Increase temperature offset hotkey  -->
+        <Grid Margin="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock
+                Grid.Column="0"
+                VerticalAlignment="Center"
+                Text="温度偏移 +"
+                ToolTip="增加当前温度偏移量的全局热键" />
+            <controls:HotKeyTextBox
+                Grid.Column="1"
+                Width="120"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                HotKey="{Binding IncreaseTemperatureOffsetHotKey}"
+                Style="{DynamicResource MaterialDesignTextBox}"
+                TextAlignment="Center" />
+        </Grid>
+
+        <!--  Decrease temperature offset hotkey  -->
+        <Grid Margin="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock
+                Grid.Column="0"
+                VerticalAlignment="Center"
+                Text="温度偏移 -"
+                ToolTip="降低当前温度偏移量的全局热键" />
+            <controls:HotKeyTextBox
+                Grid.Column="1"
+                Width="120"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                HotKey="{Binding DecreaseTemperatureOffsetHotKey}"
+                Style="{DynamicResource MaterialDesignTextBox}"
+                TextAlignment="Center" />
+        </Grid>
+
+        <!--  Increase brightness offset hotkey  -->
+        <Grid Margin="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock
+                Grid.Column="0"
+                VerticalAlignment="Center"
+                Text="亮度偏移 +"
+                ToolTip="增加当前亮度偏移的全局热键" />
+            <controls:HotKeyTextBox
+                Grid.Column="1"
+                Width="120"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                HotKey="{Binding IncreaseBrightnessOffsetHotKey}"
+                Style="{DynamicResource MaterialDesignTextBox}"
+                TextAlignment="Center" />
+        </Grid>
+
+        <!--  Decrease brightness offset hotkey  -->
+        <Grid Margin="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock
+                Grid.Column="0"
+                VerticalAlignment="Center"
+                Text="亮度偏移 -"
+                ToolTip="降低当前亮度偏移的全局热键" />
+            <controls:HotKeyTextBox
+                Grid.Column="1"
+                Width="120"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                HotKey="{Binding DecreaseBrightnessOffsetHotKey}"
+                Style="{DynamicResource MaterialDesignTextBox}"
+                TextAlignment="Center" />
+        </Grid>
+
+        <!--  Reset offset hotkey  -->
+        <Grid Margin="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock
+                Grid.Column="0"
+                VerticalAlignment="Center"
+                Text="重置偏移量"
+                ToolTip="全局热键，用于重置当前温度和亮度偏移。" />
+            <controls:HotKeyTextBox
+                Grid.Column="1"
+                Width="120"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                HotKey="{Binding ResetConfigurationOffsetHotKey}"
+                Style="{DynamicResource MaterialDesignTextBox}"
+                TextAlignment="Center" />
+        </Grid>
+    </StackPanel>
+</UserControl>
