@@ -6,8 +6,8 @@
 除了字符串资源,未做代码修改.
 
 ![UI截图](.screenshots/UI.png)
-![设置截图1](.screenshots/set1.png)
-![设置截图2](.screenshots/set2.png)
+![设置截图1](.screenshots/Set1.png)
+![设置截图2](.screenshots/Set2.png)
 
 
 以下为源说明
